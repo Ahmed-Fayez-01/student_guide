@@ -65,6 +65,7 @@ class HomeViewBody extends StatelessWidget {
                 Image.asset(
                   AssetData.mainPoster,
                   height: 520.h,
+                  width: double.infinity,
                   fit: BoxFit.cover,
                 ),
                 Container(

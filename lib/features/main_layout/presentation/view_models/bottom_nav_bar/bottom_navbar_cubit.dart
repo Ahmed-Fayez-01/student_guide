@@ -11,7 +11,10 @@ class BottomNavbarCubit extends Cubit<BottomNavbarState> {
   int currentIndex = 0;
 
   void changeBottomNavbar(int index) {
-    currentIndex = index;
+    if(index<=2)
+      {
+        currentIndex = index;
+      }
     emit(ChangeBottomNavbarState());
   }
 }

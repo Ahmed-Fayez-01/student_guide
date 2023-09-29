@@ -17,6 +17,16 @@ class HomeViewBody extends StatelessWidget {
       borderRadius: BorderRadius.all(Radius.circular(2)),
     ),
   );
+  List<String> objectives = [
+    "إجراء الدراسات والبحوث العلمية والتطبيقية في مجال الحاسبات والذكاء الاصطناعي وفي مقدمتها تلك التي لها أثر مباشر على التنمية المتكاملة في المجتمع وانشاء وحدات ابحاث متخصصة في الفروع المختلفة للحاسبات والذكاء الاصطناعي.",
+    "تقديم الاستشارات والمساعدات العلمية والفنية للهيئات والجهات التي تستخدم تكنولوجيا الحاسبات والذكاء الاصطناعي وتهتم بصناعة واتخاذ القرار ودعمه.",
+    "تدريب الكوادر الفنية في قطاعات الدولة المختلفة على تكنولوجيا الحاسبات والذكاء الاصطناعي.",
+    "نشر الوعي وتعميقه في المجتمع بهدف استخدام تكنولوجيا الحاسبات والذكاء الاصطناعي في قطاعات ومؤسسات الدولة المختلفة، ورفع كفاءة استخدامها.",
+    "تنظيم المؤتمرات وعقد الاجتماعات العلمية بهدف الارتقاء بالمستوي التعليمي وتعميق المفهوم العلمي بين الكوادر المتخصصة.",
+    "عقد الاتفاقيات العلمية مع الهيئات والمؤسسات المناظرة على المستوي المحلي والإقليمي والعالمي بهدف تبادل الآراء وإجراء البحوث المتعلقة بتخصصات الحاسبات والذكاء الاصطناعي.",
+    "توفير وتدعيم وسائل النشر والبحث العلمي في شتي مجالات التخصص.",
+    "إنشاء وحدات متخصصة متقدمة في الفروع المختلفة لعلوم الحاسبات والذكاء الاصطناعي.",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +135,7 @@ class HomeViewBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "رئيس جامعة بني سويف",
+                    "كلمة رئيس جامعة بني سويف",
                     style: TextStyle(
                       fontFamily: "Cairo",
                       fontSize: 22,
@@ -145,9 +155,19 @@ class HomeViewBody extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
-                  Image.asset(
-                    AssetData.president,
-                    width: double.infinity,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(120.sp),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                      ),
+                      child: Image.asset(
+                        AssetData.president,
+                        fit: BoxFit.fitWidth,
+                        width: 180.sp,
+                        height: 180.sp,
+                      ),
+                    ),
                   ),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -158,6 +178,17 @@ class HomeViewBody extends StatelessWidget {
                             fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  const Text(
+                    "ابنائي الطلاب و الطالبات \nتهنية قلبية و ترحيب بكم في بداية التحاقكم بجامعة بني سويف و التي تفتح ذراعيها لكم متضمنة كل الانشطة الطلابية و الاكاديمية .و المجتمع الطلابي داخل جامعة بني سويف يمثل اسرة مترابطة و متعاونة لبعضها البعض , و تعمل الجامعة علي توفير متطلبات العمل الدراسي داخل قاعات الدرس و تقديم كافة التسهيلات الممكنة لجميع ابنائنا الطلاب بشان الانشطة الثقافية و الرياضية و العلمية و انشطة الجوالة و غيرها من الانشطة الطلابية التي تحقق نوع جيد من الصلة و التواصل بين الطلاب و اعضاء هيئة التدريس و فريق العمل الاداري بالجامعة ضمن فاعليات الجامعة .آمل ان تكون هذه البداية في الحياة الجامعية هي نقطة الانطلاق لكل منكم نحو تحقيق مستقبل واعد و مميز في النواحي العلمية و الطلابية تمهيدا لتحقيق تطلعاتكم في العمل و المساهمة في تدعيم هذا الوطن الحبيب مصر.\nأبنائي الطلاب دعائي الي الله عزوجل ان يشملكم دائما برعايته و يديم علي وطننا الحبيب مصر كل العزة و التقدم و الرقي .",
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      fontFamily: "Cairo",
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),
@@ -210,8 +241,8 @@ class HomeViewBody extends StatelessWidget {
                             ),
                             child: Image.asset(
                               AssetData.dean,
+                              fit: BoxFit.cover,
                               width: 180.sp,
-
                               height: 180.sp,
                             ),
                           ),
@@ -223,7 +254,8 @@ class HomeViewBody extends StatelessWidget {
                               "أ.د محمد سيد قايد",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontWeight: FontWeight.bold, fontSize: 18),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
                             ),
                           ],
                         ),
@@ -252,7 +284,7 @@ class HomeViewBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "عن الكلية",
+                    "رسالة الكلية",
                     style: TextStyle(
                       fontFamily: "Cairo",
                       fontSize: 22,
@@ -270,32 +302,13 @@ class HomeViewBody extends StatelessWidget {
                     height: 20,
                   ),
                   const Text(
-                    "هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية",
+                    "تتمثل رسالة كلية الحاسبات والذكاء الاصطناعي في إمداد الطالب بأصول المعرفة والبحث العلمي في مجالات علوم الحاسب ونظم وتكنولوجيا المعلومات وتنمية شخصية الطالب لجعله راغباً في الابتكار ومحباً للعمل الجماعي وقادراً على المنافسة المحلية والإقليمية والعالمية. كما تهدف الى تنمية الوعي بقيمة التعليم المستمر وحتمية التعلم الذاتي وأهمية استخدام الأساليب الحديثة في هذا المجال واستخدام البحث العلمي كوسيلة لتحقيق الابتكار في مجالات الكلية. تهتم الكلية بتقديم خدمة مجتمعية متميزة في مجالات الكلية و تعزيز مبادئ المصداقية والأخلاقيات.",
                     textAlign: TextAlign.center,
-                    maxLines: 4,
-                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontFamily: "Cairo",
                       fontSize: 16,
                     ),
                   ),
-                  ElevatedButton(
-                    style: raisedButtonStyle,
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        SvgPicture.asset(
-                          AssetData.more,
-                          color: Colors.white,
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        const Text('المزيد عن الكلية'),
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
@@ -304,12 +317,12 @@ class HomeViewBody extends StatelessWidget {
               children: [
                 Image.asset(
                   AssetData.mainPoster,
-                  height: 180.h,
+                  height: 200.h,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
                 Container(
-                  height: 180.h,
+                  height: 200.h,
                   width: double.infinity,
                   color: const Color.fromARGB(100, 22, 44, 33),
                   child: Padding(
@@ -333,11 +346,11 @@ class HomeViewBody extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         const Text(
-                          "هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية هنا هيكون وصف رؤية الكلية",
+                          "تسعى كلية الحاسبات والذكاء الاصطناعي بجامعة بني سويف للارتقاء بالمستوى العلمي والعملي والبحثي في مجالات علوم الحاسب وتكنولوجيا المعلومات والوسائط المتعددة لتحقيق مكانة مرموقة بين كليات الحاسبات وتحقيق التميز والابتكار في مجالات التعليم والبحث العلمي وخدمة المجتمع.",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontFamily: "Cairo",
@@ -357,7 +370,7 @@ class HomeViewBody extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    "رسالة الكلية",
+                    "اهداف الكلية",
                     style: TextStyle(
                       fontFamily: "Cairo",
                       fontSize: 22,
@@ -374,7 +387,7 @@ class HomeViewBody extends StatelessWidget {
                   ListView.separated(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    itemCount: 6,
+                    itemCount: objectives.length,
                     itemBuilder: (context, index) {
                       return Row(
                         children: [
@@ -390,8 +403,7 @@ class HomeViewBody extends StatelessWidget {
                               flex: 3,
                               child: Column(
                                 children: [
-                                  const Text(
-                                      "هنا هيكون اهداف الكلية او الرسالة اللي بتهدف ليا الكلية ان شاء الله "),
+                                  Text(objectives[index],),
                                   const SizedBox(
                                     height: 5,
                                   ),
